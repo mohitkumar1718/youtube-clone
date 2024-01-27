@@ -1,11 +1,14 @@
 import React from 'react'
-
+import { useSelector } from 'react-redux'
+import { Link } from 'react-router-dom'
 const Sidebar = () => {
+  const iSMenuOpen=useSelector((store)=>store.app.iSMenuOpen)
+  if(!iSMenuOpen) return null;
   return (
-    <div className='pl-4 w-48 shadow-lg pt-2'>
-      <div>
+    <div className='pl-4  shadow-lg pt-2 pr-14'>
+      <div className='w-full'>
         <ul>
-          <li className=' w-full p-1'>Home</li>
+          <li className=' w-full p-1'><Link to="/">Home</Link></li>
           <li className=' w-full p-1'>Shorts</li>
           <li className=' w-full p-1'>subscription</li>
         </ul>
