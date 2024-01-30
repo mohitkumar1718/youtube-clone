@@ -11,7 +11,7 @@ const appSlice=createSlice({
         },
         closeMenu:(state)=>{
             state.iSMenuOpen=false;
-        }
+        } 
     }
 })
 export const {toggleMenu,closeMenu}=appSlice.actions;

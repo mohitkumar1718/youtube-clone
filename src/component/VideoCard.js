@@ -6,10 +6,10 @@ const VideoCard = ({info}) => {
     const {snippet,statistics}=info;
     const {title,thumbnails,channelTitle}=snippet;
   return (
-    <div className='p-2 rounded-lg w-80 '>
-        <img className=' h-52 rounded-lg m-2' src={thumbnails.high.url} alt="thumbnail" />
+    <div className=' w-full px-2 rounded-lg sm:w-80 '>
+        <img className='w-full  md:h-52 rounded-lg ' src={thumbnails.high.url} alt="thumbnail" />
         <ul>
-            <li className='font-bold p-1 '>{title}</li>
+            <li className='font-bold p-1 w-80 sm:w-80 overflow-hidden  whitespace-nowrap text-ellipsis'>{title}</li>
             <li className='pl-1'>{channelTitle}</li>
             <li className='pl-1'>{statistics.viewCount} Views</li>
 

@@ -5,7 +5,7 @@ const Sidebar = () => {
   const iSMenuOpen=useSelector((store)=>store.app.iSMenuOpen)
   if(!iSMenuOpen) return null;
   return (
-    <div className='pl-4  shadow-lg pt-2 pr-14'>
+    <div className='pt-20 fixed pl-4 bg-white  shadow-lg pt-2 pr-14 overflow-y-visible transition-all delay-150'>
       <div className='w-full'>
         <ul>
           <li className=' w-full p-1'><Link to="/">Home</Link></li>

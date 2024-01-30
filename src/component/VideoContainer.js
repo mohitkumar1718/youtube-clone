@@ -6,6 +6,7 @@ const VideoContainer = () => {
   const [videos,setVideos]=useState([]);
   useEffect(()=>{
     getVideos();
+    window.scrollTo(0, 0);
   },[])
 
   const getVideos=async ()=>{
@@ -14,8 +15,8 @@ const VideoContainer = () => {
     // console.log(json.items);
     setVideos(json.items);
   }
-  return (
-    <div className='flex flex-wrap justify-center '>
+  return videos && (
+    <div className='lg:pt-14 flex flex-wrap justify-center  '>
     {videos.map((video)=>
     <Link  key={video.id} to={"/watch?v="+video.id}><VideoCard info={video}/></Link>)}
       
